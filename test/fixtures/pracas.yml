@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_equip_urbano: MyString
+  tipo_equip_urbano: MyString
+  endereco_equip_urbano: MyString
+  codigo_logradouro: MyString
+  lei_equip_urbano: MyString
+  nome_bairro: MyString
+  codigo_bairro: MyString
+  nome_oficial_equip_urbano: MyString
+  area: MyString
+  perimetro: MyString
+  latitude: MyString
+  longitude: MyString
+
+two:
+  nome_equip_urbano: MyString
+  tipo_equip_urbano: MyString
+  endereco_equip_urbano: MyString
+  codigo_logradouro: MyString
+  lei_equip_urbano: MyString
+  nome_bairro: MyString
+  codigo_bairro: MyString
+  nome_oficial_equip_urbano: MyString
+  area: MyString
+  perimetro: MyString
+  latitude: MyString
+  longitude: MyString

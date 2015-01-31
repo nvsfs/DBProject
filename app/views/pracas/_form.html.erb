@@ -1,0 +1,108 @@
+<%= form_for @praca, :html => { :class => "form-horizontal praca" } do |f| %>
+
+    <% if @praca.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@praca.errors.count, "error") %> prohibited this praca from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @praca.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :nome_equip_urbano, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_equip_urbano, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:nome_equip_urbano]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipo_equip_urbano, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipo_equip_urbano, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:tipo_equip_urbano]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :endereco_equip_urbano, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :endereco_equip_urbano, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:endereco_equip_urbano]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :codigo_logradouro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codigo_logradouro, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:codigo_logradouro]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :lei_equip_urbano, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lei_equip_urbano, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:lei_equip_urbano]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_bairro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_bairro, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:nome_bairro]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :codigo_bairro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codigo_bairro, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:codigo_bairro]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_oficial_equip_urbano, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_oficial_equip_urbano, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:nome_oficial_equip_urbano]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :area, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :area, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:area]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :perimetro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :perimetro, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:perimetro]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :latitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :latitude, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:latitude]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :longitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :longitude, :class => 'form-control' %>
+    </div>
+    <%= error_span(@praca[:longitude]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            pracas_path, :class => 'btn btn-default' %>
+
+<% end %>

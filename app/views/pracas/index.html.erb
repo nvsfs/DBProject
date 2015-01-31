@@ -1,0 +1,42 @@
+  <section class="main clearfix">
+
+
+<%- model_class = Praca -%>
+
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:tipo) %></th>
+      <th><%= model_class.human_attribute_name(:endereco) %></th>
+      <th><%= model_class.human_attribute_name(:bairro) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pracas.each do |praca| %>
+      <tr>
+        <td><%= link_to praca.id, praca_path(praca) %></td>
+        <td><%= praca.nome_equip_urbano %></td>
+        <td><%= praca.tipo_equip_urbano %></td>
+        <td><%= praca.endereco_equip_urbano %></td>
+        <td><%= praca.nome_bairro %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_praca_path(praca), :class => 'btn btn-default btn-xs' %>
+          
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_praca_path,
+            :class => 'btn btn-primary' %>
+           
+</section>

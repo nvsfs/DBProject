@@ -1,0 +1,28 @@
+<header>
+		
+<div id="menu_icon"></div>
+		<nav>
+		<ul>
+	<li>Praças de Recife</li>
+	</ul>
+			</nav>
+			</div>
+
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><%= link_to "Início", root_path %></li>
+				<li><%= link_to "Todos", pracas_path %></li>
+				<li><%= link_to 'Adicionar', new_praca_path %></li>
+				<li><a href="#">Grupo</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+<%= form_tag(pracas_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Pesquisa" %>
+	 <%= submit_tag "Search", :name => nil %>
+
+<% end %>
+
+</header><!-- end header -->

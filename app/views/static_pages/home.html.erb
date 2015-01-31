@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Recife</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/home/lucas/Workspace/Projeto_pracas/app/assets/stylesheets/application.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	
+
+	<section class="main clearfix">
+		<div class="work">
+		<%= link_to image_tag("http://eucurtorecife.com.br/wp-content/uploads/2013/08/Pra%C3%A7a-da-Rep%C3%BAblica-Recife.jpg", alt: "Rails logo"), '#' %>
+ 			<a href="http://localhost:3000/pracas?searchparque=Praça">
+
+			
+				
+				<div class="caption">
+					<div class="work_title">
+						<h1>Praças</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			
+					<%= link_to image_tag("http://pertodecasa.rec.br/wp-content/uploads/2013/04/AAAAAAA.jpg", alt: "Rails logo"), 'http://upload.wikimedia.org/wikipedia/commons/a/a4/Baoba_recife_2.JPG'%>
+					<a href="http://localhost:3000/pracas?searchparque=Area+Verde">
+				<div class="caption">
+					<div class="work_title">
+						<h1>Área Verde</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+
+		<div class="work">
+			<%= link_to image_tag("http://img521.imageshack.us/img521/8523/dscf5005.jpg", alt: "Rails logo"),  pracas_path(:searchparque => 'PARQUE'), :remote => true %>
+
+			<a href="http://localhost:3000/pracas?searchparque=Parque">
+				<div class="caption">
+					<div class="work_title">
+						<h1>Parques</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		
+	</section><!-- end main -->
+	
+</body>
+</html>
